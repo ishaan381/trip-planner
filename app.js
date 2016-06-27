@@ -1,5 +1,7 @@
 var Express = require('express');
 var app = new Express();
+var swig = require ('swig');
+var path = require('path');
 
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
@@ -12,9 +14,11 @@ swig.setDefaults({ cache: false });
 
 app.use(morgan('dev'));
 
-app.use(express.static(path.join(__dirname, './public')));
+app.use(Express.static(path.join(__dirname, './public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.use('/', require('./routes'));
 
 app.use(function(req, res, next){
   var err = new Error('Not Found');
@@ -22,8 +26,12 @@ app.use(function(req, res, next){
   next(err);
 })
 
-app.us(function(err, req,res, next) {
+app.use(function(err, req,res, next) {
   res.status(err.status || 500);
   console.error(err);
   res.render('error');
+})
+
+app.listen(3000, function (){
+  console.log('listening');
 })
