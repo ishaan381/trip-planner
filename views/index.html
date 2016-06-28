@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/styles.css" rel="stylesheet">
+</head>
 
-  <body>
-  <h1> Hello Travelers </h1>
-  Hotels:
-  <select>
-    <option> Choose your hotel!</option>
-    {% for hotel in thing %}
-    <option> {{hotel.name}} </option>
-    {% endfor %}
-  </select>
-  </body>
-
-
-<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script> -->
+<body>
+    <nav class="navbar navbar-inverse">
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">.col-md-8</div>
+            <div class="col-md-4">
+                <div class="row">
+                    farewell
+                </div>
+                <div class="row">
+                    Hello
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1> Hello Travelers </h1> Hotels:
+    <select>
+        <option> Choose your hotel!</option>
+        {% for hotel in thing %}
+        <option> {{hotel.name}} </option>
+        {% endfor %}
+    </select>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 </html>

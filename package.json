@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass -w -r assets/stylesheets -o public/stylesheets"
   },
   "author": "",
   "license": "ISC",
@@ -13,11 +14,15 @@
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.6",
     "express": "^4.14.0",
+    "jquery": "^3.0.0",
     "morgan": "^1.7.0",
     "path": "^0.12.7",
     "pg": "^6.0.1",
     "pg-native": "^1.10.0",
     "sequelize": "^3.23.4",
     "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "node-sass": "^3.8.0"
   }
 }
