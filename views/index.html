@@ -10,19 +10,28 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
-        <h1> Hello Travelers </h1>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+                    <span class="glyphicon glyphicon-map-marker navbar-brand"></span>
+
+            </div>
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">About</a></li>
+                <li role="presentation"><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <div id="map-canvas">
-
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="row">
-                    Hotels:
+            <div class="col-md-3">
+                <div class="row" id="selections">
                     <div class='dropdown'>
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Hotels
@@ -34,7 +43,6 @@
                             {% endfor %}
                         </ul>
                     </div>
-                    Restaurants:
                     <div class='dropdown'>
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Restaurants
@@ -46,7 +54,6 @@
                             {% endfor %}
                         </ul>
                     </div>
-                    Activities:
                     <div class='dropdown'>
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Activities
@@ -67,7 +74,6 @@
         </div>
     </div>
 </body>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="maps.js"></script>
 <script src="js/bootstrap.min.js"></script>
