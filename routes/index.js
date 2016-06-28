@@ -9,11 +9,11 @@ var Restaurant = models.Restaurant;
 var Promise = require('bluebird')
 
 router.get('/', function (req, res, next) {
-  Promise.all(Place.findAll({}), Hotel.findAll({}), Activity.findAll({}), Restaurant.findAll({}))
-  .spread(function (place, hotel, activity, restaurant){
-    console.log(place)
-    // res.json('index', {thing: things})
-    res.json(hotel)
+  Promise.all([Place.findAll({}), Hotel.findAll({}), Activity.findAll({}), Restaurant.findAll({})])
+  .spread(function (places, hotels, activities, restaurants){
+    console.log(hotels)
+    res.render('index', {thing: hotels})
+    // res.json(activities)
   })
 })
 
