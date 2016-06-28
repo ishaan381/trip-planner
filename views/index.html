@@ -11,29 +11,65 @@
 
 <body>
     <nav class="navbar navbar-inverse">
+        <h1> Hello Travelers </h1>
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8">.col-md-8</div>
+            <div class="col-md-8">.col-md-8
+                <div id="map-canvas">
+
+                </div>
+            </div>
             <div class="col-md-4">
                 <div class="row">
-                    farewell
+                    Hotels:
+                    <div class='dropdown'>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Hotels
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            {% for hotel in hotels %}
+                            <li> <a href="#"> {{hotel.name}} </a> </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    Restaurants:
+                    <div class='dropdown'>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Restaurants
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            {% for restaurant in restaurants %}
+                            <li> <a href="#"> {{restaurant.name}} </a> </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    Activities:
+                    <div class='dropdown'>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Activities
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            {% for activity in activities %}
+                            <li> <a href="#"> {{activity.name}} </a> </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- end dropdown -->
                 </div>
                 <div class="row">
-                    Hello
+                    <h2>Your Trip Here</h2>
                 </div>
             </div>
         </div>
     </div>
-    <h1> Hello Travelers </h1> Hotels:
-    <select>
-        <option> Choose your hotel!</option>
-        {% for hotel in thing %}
-        <option> {{hotel.name}} </option>
-        {% endfor %}
-    </select>
 </body>
+<script src="maps.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKfc54i5sO4qPwMxBV-3s894-3dx-oGmw&sensor=true"></script>
 
 </html>

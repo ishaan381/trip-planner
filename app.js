@@ -14,7 +14,9 @@ swig.setDefaults({ cache: false });
 
 app.use(morgan('dev'));
 
+// app.use(Express.static(path.join(__dirname, './maps')));
 app.use(Express.static(path.join(__dirname, './public')));
+// app.use(Express.static(path.join(__dirname, './public/maps')));
 app.use(Express.static(path.join(__dirname, './node_modules/bootstrap/dist')));
 app.use(Express.static(path.join(__dirname, './node_modules/jquery/dist')));
 
